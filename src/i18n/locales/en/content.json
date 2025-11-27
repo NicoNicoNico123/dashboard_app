@@ -1,29 +1,43 @@
 [
   {
     "id": 1,
-    "title": "Nico's space",
+    "title": "Demon Slayer",
+    "subtitle": "The Tale of a Demon Slayer",
     "description": "Tanjiro Kamado, a young boy who becomes a demon slayer after his family is slaughtered and his younger sister Nezuko is turned into a demon.",
-    "image": "https://image.pollinations.ai/prompt/anime%20demon%20slayer%20dark%20action%20scene%20katana?width=1280&height=720&nologo=true&seed=101",
-    "poster": "https://image.pollinations.ai/prompt/anime%20demon%20slayer%20portrait?width=300&height=450&nologo=true&seed=101",
-    "url": "#app1",
-    "tags": ["Action", "Fantasy"]
+    "image": "/images/backgrounds/nico_bg.png",
+    "poster": "/images/posters/nico_bg.png",
+    "url": "",
+    "contentType": "container",
+    "containerTitle": "Demon Slayer Details",
+    "containerSubtitle": "Extended Universe Info",
+    "containerImg": "/images/container/nico_qrcode.jpeg",
+    "tags": ["Action", "Fantasy"],
+    "buttonText": "Enter"
   },
   {
     "id": 2,
     "title": "Attack on Titan",
     "description": "After his hometown is destroyed and his mother is killed, young Eren Yeager vows to cleanse the earth of the giant humanoid Titans.",
-    "image": "https://image.pollinations.ai/prompt/anime%20attack%20on%20titan%20colossal%20wall%20dark?width=1280&height=720&nologo=true&seed=102",
-    "poster": "https://image.pollinations.ai/prompt/anime%20attack%20on%20titan%20portrait?width=300&height=450&nologo=true&seed=102",
-    "url": "#app2",
-    "tags": ["Anime", "Dark Fantasy", "Drama"]
+    "image": "/images/backgrounds/attack_on_titan_bg.jpg",
+    "poster": "/images/posters/attack_on_titan_poster.jpg",
+    "url": "https://niconiconico123.github.io/color_pccs/",
+    "contentType": "external",
+    "tags": ["Anime", "Dark Fantasy", "Drama"],
+    "buttonText": "Enter"
   },
   {
     "id": 3,
     "title": "One Piece",
+    "subtitle": "The Great Pirate Era",
     "description": "Monkey D. Luffy refuses to let anyone or anything stand in the way of his quest to become the king of all pirates.",
-    "image": "https://image.pollinations.ai/prompt/anime%20one%20piece%20ocean%20ship%20adventure?width=1280&height=720&nologo=true&seed=103",
-    "poster": "https://image.pollinations.ai/prompt/anime%20one%20piece%20luffy%20portrait?width=300&height=450&nologo=true&seed=103",
+    "image": "/images/backgrounds/one_piece_bg.jpg",
+    "poster": "/images/posters/one_piece_poster.jpg",
     "url": "#app3",
-    "tags": ["Anime", "Adventure", "Comedy"]
+    "contentType": "container",
+    "containerTitle": "One Piece World",
+    "containerSubtitle": "Explore the Grand Line",
+    "containerImg": "/images/backgrounds/one_piece_bg.jpg",
+    "tags": ["Anime", "Adventure", "Comedy"],
+    "buttonText": "Enter"
   }
 ]

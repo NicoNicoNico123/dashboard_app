@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import Modal from './Modal';
 
-const Hero = ({ activeContent }) => {
+const Hero = ({ activeContent, isModalOpen, setIsModalOpen }) => {
   const { t } = useTranslation();
   const [loaded, setLoaded] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -11,12 +12,12 @@ const Hero = ({ activeContent }) => {
     // Start transition
     setIsTransitioning(true);
     setLoaded(false);
-    
+
     // Fade out current content
     const fadeOutTimer = setTimeout(() => {
       setDisplayContent(activeContent);
       setIsTransitioning(false);
-      
+
       // Load new image
       const img = new Image();
       img.src = activeContent.image;
@@ -37,7 +38,7 @@ const Hero = ({ activeContent }) => {
 
     return (
       <button
-        onClick={() => console.log('Button clicked')}
+        onClick={() => setIsModalOpen(true)}
         className="
           relative
           rounded-full
@@ -145,10 +146,17 @@ const Hero = ({ activeContent }) => {
             {/* Ambient background glow behind the button (for atmosphere) */}
             <div className="absolute -inset-4 bg-cyan-500/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            <NeonButton text={t('enter')} />
+            <NeonButton text={displayContent.buttonText} />
           </div>
         </div>
       </div>
+
+      <Modal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        content={displayContent} 
+      />
+
     </div>
   );
 };

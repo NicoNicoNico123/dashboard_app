@@ -7,6 +7,7 @@ import LanguageSelector from './components/LanguageSelector';
 function App() {
   const { t } = useTranslation();
   const [activeContentId, setActiveContentId] = useState(3);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const intervalRef = useRef(null);
   const timeoutRef = useRef(null);
   const lastInteractionRef = useRef(Date.now());
@@ -22,6 +23,9 @@ function App() {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
+
+      // Don't start if modal is open
+      if (isModalOpen) return;
 
       // Set up new interval for auto-sliding
       intervalRef.current = setInterval(() => {
@@ -40,7 +44,7 @@ function App() {
     const checkIdle = setInterval(() => {
       const timeSinceLastInteraction = Date.now() - lastInteractionRef.current;
       // If user has been idle for more than 5 seconds, restart auto-slide
-      if (timeSinceLastInteraction > 5000 && !intervalRef.current) {
+      if (timeSinceLastInteraction > 5000 && !intervalRef.current && !isModalOpen) {
         startAutoSlide();
       }
     }, 1000);
@@ -55,7 +59,7 @@ function App() {
       }
       clearInterval(checkIdle);
     };
-  }, []);
+  }, [isModalOpen]); // Re-run when modal state changes
 
   // Handle user selection - pause auto-slide and restart after idle
   const handleSelect = (id) => {
@@ -95,7 +99,11 @@ function App() {
       <LanguageSelector />
       <main className="h-full w-full relative">
         {/* Hero Section */}
-        <Hero activeContent={activeContent} />
+        <Hero 
+          activeContent={activeContent} 
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+        />
 
         {/* Content Rail Overlay */}
         <ContentRail items={CONTENT} activeId={activeContentId} onSelect={handleSelect} />

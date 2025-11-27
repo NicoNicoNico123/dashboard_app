@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 const ContentRail = ({ items, activeId, onSelect }) => {
   const { t } = useTranslation();
   return (
-    <div className="absolute bottom-0 w-full z-30 pb-12 pl-20 pr-12 bg-gradient-to-t from-[#0f1014] via-[#0f1014] to-transparent" style={{ paddingTop: '3vh' }}>
-      <div className="flex space-x-8 overflow-x-auto scrollbar-hide items-end mask-image-right border-l border-b border-white/20" style={{ paddingLeft: '7vw', paddingRight: '1.56vw', paddingBottom: '3vh' }}>
+    <div className="absolute bottom-0 w-full z-30 pb-12 pl-20 pr-12 bg-gradient-to-t from-[#0f1014] via-[#0f1014] to-transparent pointer-events-none" style={{ paddingTop: '3vh' }}>
+      <div className="flex space-x-8 overflow-x-auto scrollbar-hide items-end mask-image-right border-l border-b border-white/20 pointer-events-auto" style={{ paddingLeft: '7vw', paddingRight: '1.56vw', paddingBottom: '3vh' }}>
         {items.map((item) => {
           const isActive = item.id === activeId;
           return (
