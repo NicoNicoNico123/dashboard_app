@@ -119,20 +119,7 @@ const Hero = ({ activeContent, isModalOpen, setIsModalOpen }) => {
           isTransitioning ? 'opacity-0 translate-x-[-20px] translate-y-4' : 'opacity-100 translate-x-0 translate-y-0'
         }`}>
           
-          {/* Tags Row */}
-          <div className="flex items-center space-x-3 mb-8">
-             <div className="flex items-center bg-white/10 backdrop-blur-md px-3 py-1 rounded-md border border-white/10">
-                <span className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
-                <span className="text-white text-[10px] font-bold uppercase tracking-wider">{t('live_app')}</span>
-             </div>
-            {displayContent.tags.map((tag) => (
-              <span key={tag} className="text-gray-300 text-xs font-medium px-2 py-1 rounded border border-transparent hover:border-white/20 transition-colors cursor-default">
-                {tag}
-              </span>
-            ))}
-          </div>
-          
-          {/* Main Title */}
+            {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tight drop-shadow-2xl mb-8" style={{ marginBottom: '2vh' }}>
             {displayContent.title}
           </h1>

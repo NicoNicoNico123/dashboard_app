@@ -12,7 +12,9 @@
     "containerSubtitle": "扩展宇宙信息",
     "containerImg": "/images/container/nico_qrcode.jpeg",
     "tags": ["动作", "奇幻"],
-    "buttonText": "Enter"
+    "buttonText": "Enter",
+    "version": "v2.4.0",
+    "updateTime": "2小时前"
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
     "url": "https://niconiconico123.github.io/color_pccs/",
     "contentType": "external",
     "tags": ["动漫", "黑暗奇幻", "剧情"],
-    "buttonText": "Enter"
+    "buttonText": "Enter",
+    "version": "v2.4.0",
+    "updateTime": "2小时前"
   },
   {
     "id": 3,
@@ -38,6 +42,8 @@
     "containerSubtitle": "探索伟大航路",
     "containerImg": "/images/backgrounds/one_piece_bg.jpg",
     "tags": ["动漫", "冒险", "喜剧"],
-    "buttonText": "Enter"
+    "buttonText": "Enter",
+    "version": "v2.4.0",
+    "updateTime": "2小时前"
   }
 ]

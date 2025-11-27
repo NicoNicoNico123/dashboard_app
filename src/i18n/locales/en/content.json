@@ -8,11 +8,11 @@
     "poster": "/images/posters/nico_bg.png",
     "url": "",
     "contentType": "container",
-    "containerTitle": "Demon Slayer Details",
-    "containerSubtitle": "Extended Universe Info",
-    "containerImg": "/images/container/nico_qrcode.jpeg",
-    "tags": ["Action", "Fantasy"],
-    "buttonText": "Enter"
+    "containerTitle": "Follow my Instagram",
+    "containerSubtitle": "Message me for connection",
+    "containerImg": "/images/container/nico_qrcode.png",
+    "buttonText": "Enter",
+    "version": "v1.0.0"
   },
   {
     "id": 2,
@@ -23,7 +23,9 @@
     "url": "https://niconiconico123.github.io/color_pccs/",
     "contentType": "external",
     "tags": ["Anime", "Dark Fantasy", "Drama"],
-    "buttonText": "Enter"
+    "buttonText": "Enter",
+    "version": "v2.4.0",
+    "updateTime": "2 hours ago"
   },
   {
     "id": 3,
@@ -38,6 +40,8 @@
     "containerSubtitle": "Explore the Grand Line",
     "containerImg": "/images/backgrounds/one_piece_bg.jpg",
     "tags": ["Anime", "Adventure", "Comedy"],
-    "buttonText": "Enter"
+    "buttonText": "Enter",
+    "version": "v2.4.0",
+    "updateTime": "2 hours ago"
   }
 ]

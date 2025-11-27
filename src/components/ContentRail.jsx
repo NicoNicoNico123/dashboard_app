@@ -6,7 +6,7 @@ const ContentRail = ({ items, activeId, onSelect }) => {
   const { t } = useTranslation();
   return (
     <div className="absolute bottom-0 w-full z-30 pb-12 pl-20 pr-12 bg-gradient-to-t from-[#0f1014] via-[#0f1014] to-transparent pointer-events-none" style={{ paddingTop: '3vh' }}>
-      <div className="flex space-x-8 overflow-x-auto scrollbar-hide items-end mask-image-right border-l border-b border-white/20 pointer-events-auto" style={{ paddingLeft: '7vw', paddingRight: '1.56vw', paddingBottom: '3vh' }}>
+      <div className="flex space-x-8 overflow-x-auto scrollbar-hide items-end mask-image-right pointer-events-auto" style={{ paddingLeft: '7vw', paddingRight: '1.56vw', paddingBottom: '3vh' }}>
         {items.map((item) => {
           const isActive = item.id === activeId;
           return (
@@ -40,9 +40,8 @@ const ContentRail = ({ items, activeId, onSelect }) => {
               <div className={`!mt-3 transition-all duration-500 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                 <h4 className="text-white font-bold text-lg truncate leading-tight">{item.title}</h4>
                 <div className="flex items-center space-x-2 mt-1">
-                   <span className="text-purple-400 text-xs font-bold uppercase">v2.4.0</span>
+                   <span className="text-purple-400 text-xs font-bold uppercase">{item.version}</span>
                    <span className="text-gray-500 text-xs">•</span>
-                   <span className="text-gray-400 text-xs">{t('updated')} 2{t('hours_ago')}</span>
                 </div>
               </div>
             </div>
