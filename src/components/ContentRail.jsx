@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { resolvePath } from '../utils/path';
 
 const ContentRail = ({ items, activeId, onSelect }) => {
   const { t } = useTranslation();
@@ -25,7 +26,7 @@ const ContentRail = ({ items, activeId, onSelect }) => {
                   : 'ring-0 translate-y-4 hover:translate-y-2 grayscale-[30%] hover:grayscale-0'}
               `}>
                 <img
-                  src={item.poster || item.image}
+                  src={resolvePath(item.poster || item.image)}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

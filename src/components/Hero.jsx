@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Modal from './Modal';
+import { resolvePath } from '../utils/path';
 
 const Hero = ({ activeContent, isModalOpen, setIsModalOpen }) => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const Hero = ({ activeContent, isModalOpen, setIsModalOpen }) => {
 
       // Load new image
       const img = new Image();
-      img.src = activeContent.image;
+      img.src = resolvePath(activeContent.image);
       img.onload = () => {
         setLoaded(true);
       };
@@ -99,7 +100,7 @@ const Hero = ({ activeContent, isModalOpen, setIsModalOpen }) => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black z-0" /> {/* Fallback black */}
         <img 
-          src={displayContent.image} 
+          src={resolvePath(displayContent.image)} 
           alt={displayContent.title}
           className={`w-full h-full object-cover transition-all duration-600 ease-out transform z-0 ${
             loaded && !isTransitioning ? 'scale-105 opacity-60' : 'scale-110 opacity-0 blur-xl'

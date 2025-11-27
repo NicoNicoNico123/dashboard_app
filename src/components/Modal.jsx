@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { resolvePath } from '../utils/path';
 
 const Modal = ({ isOpen, onClose, content }) => {
   // Handle escape key to close
@@ -72,7 +73,7 @@ const Modal = ({ isOpen, onClose, content }) => {
               <div className="relative w-full h-64 sm:h-72 shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0f1014] z-10" />
                 <img 
-                  src={content.containerImg || content.image} 
+                  src={resolvePath(content.containerImg || content.image)} 
                   alt={content.containerTitle || content.title} 
                   className="w-full h-full object-cover"
                 />
