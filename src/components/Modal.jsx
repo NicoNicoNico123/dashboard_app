@@ -83,19 +83,31 @@ const Modal = ({ isOpen, onClose, content }) => {
             </>
           ) : (
             /* Container/Details Mode */
-            <div className="flex flex-col h-full overflow-y-auto custom-scrollbar">
+            <div className="flex flex-col h-full overflow-y-auto custom-scrollbar relative">
+              {/* Close Button for Details Mode */}
+              <button
+                onClick={onClose}
+                className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/50 text-white/70 hover:text-white hover:bg-white/20 transition-all cursor-pointer border border-white/10 flex items-center justify-center backdrop-blur-sm"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
+                title="Close (ESC)"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
               {/* Image Header */}
-              <div className="relative w-full h-64 sm:h-72 shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0f1014] z-10" />
+              <div className="relative w-full shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0f1014] z-10 pointer-events-none" />
                 <img 
                   src={resolvePath(content.containerImg || content.image)} 
                   alt={content.containerTitle || content.title} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain max-h-[40vh] bg-black/50"
                 />
               </div>
               
             {/* Text Content */}
-            <div className="relative z-20 pl-10 w-full">
+            <div className="relative z-20 pl-10 pr-6 w-full pb-10">
               <div className="mb-6 mt-6">
                   <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 tracking-tight">
                     {content.containerTitle || content.title}
@@ -106,7 +118,11 @@ const Modal = ({ isOpen, onClose, content }) => {
                     </h3>
                   )}
                 </div>
-                
+                {content.description && (
+                  <p className="text-gray-300 leading-relaxed">
+                    {content.description}
+                  </p>
+                )}
               </div>
             </div>
           )}

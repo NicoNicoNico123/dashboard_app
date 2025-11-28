@@ -53,12 +53,11 @@ const Hero = ({ activeContent, isModalOpen, setIsModalOpen }) => {
           transition-all duration-500 ease-out
           border-2
           z-10
+          px-8 py-2
+          min-w-[160px] min-h-[50px]
+          md:min-w-[200px] md:min-h-[70px]
         "
         style={{
-          // Force larger button dimensions
-          padding: '0.5rem 0.5rem',
-          minWidth: '200px',
-          minHeight: '70px',
           // Dynamic styles for the complex glow effects
           borderColor: `rgba(${primaryColor}, ${isHovered ? '1' : '0.5'})`,
           backgroundColor: isHovered
@@ -108,29 +107,29 @@ const Hero = ({ activeContent, isModalOpen, setIsModalOpen }) => {
         />
         
         {/* Cinematic Gradients - Refined for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10 w-2/3"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10 w-full md:w-2/3"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f1014] via-[#0f1014]/60 to-transparent z-10 h-full"></div>
         <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-black/40 z-10"></div>
       </div>
 
       {/* Content Info Container - UPDATED LAYOUT */}
-      <div className="absolute top-0 left-0 h-full flex flex-col justify-end z-20 max-w-2xl" style={{ paddingBottom: '45vh', paddingLeft: '9vw', paddingRight: '4vw' }}>
+      <div className="absolute top-0 left-0 h-full flex flex-col justify-end z-20 max-w-full md:max-w-2xl px-6 pb-72 md:pb-[45vh] md:pl-[9vw] md:pr-[4vw]">
         <div className={`transition-all duration-600 ease-in-out ${
           isTransitioning ? 'opacity-0 translate-x-[-20px] translate-y-4' : 'opacity-100 translate-x-0 translate-y-0'
         }`}>
           
             {/* Main Title */}
-          <h1 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tight drop-shadow-2xl mb-8" style={{ marginBottom: '2vh' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tight drop-shadow-2xl mb-4 md:mb-8">
             {displayContent.title}
           </h1>
           
           {/* Description */}
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed line-clamp-3 font-light max-w-xl text-shadow mb-6" style={{ marginBottom: '2vh' }}>
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed line-clamp-3 font-light max-w-full md:max-w-xl text-shadow mb-4 md:mb-6">
             {displayContent.description}
           </p>
           
           {/* Actions */}
-          <div className="relative group" style={{ paddingTop: '2vh' }}>
+          <div className="relative group pt-4 md:pt-[2vh]">
             {/* Ambient background glow behind the button (for atmosphere) */}
             <div className="absolute -inset-4 bg-cyan-500/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 

@@ -95,7 +95,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen w-screen bg-[#0f1014] font-sans overflow-hidden selection:bg-purple-500 selection:text-white relative">
+    <div className="h-dvh w-screen bg-[#0f1014] font-sans overflow-hidden selection:bg-purple-500 selection:text-white relative">
       <LanguageSelector />
       <main className="h-full w-full relative">
         {/* Hero Section */}
