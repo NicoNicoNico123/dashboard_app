@@ -118,11 +118,6 @@ const Modal = ({ isOpen, onClose, content }) => {
                     </h3>
                   )}
                 </div>
-                {content.description && (
-                  <p className="text-gray-300 leading-relaxed">
-                    {content.description}
-                  </p>
-                )}
               </div>
             </div>
           )}
