@@ -35,5 +35,17 @@
     "contentType": "external",
     "buttonText": "Analyze Now",
     "version": "v0.1.0(beta)"  
+  },
+  {
+    "id": 4,
+    "title": "Neon Glide: Vapor City",
+    "subtitle": "Blink to Dodge Traps!",
+    "description": "Simple endless runner: control eye closing/opening to avoid traps in neon streets. Pure fun, no stress—just glide and survive!",
+    "image": "/images/backgrounds/neon_runner.png",
+    "poster": "/images/posters/neon_runner.png",
+    "url": "https://niconiconico123.github.io/runner_game/",
+    "contentType": "external",
+    "buttonText": "Play",
+    "version": "v0.1.0(beta)"  
   }
 ]

@@ -34,5 +34,17 @@
     "contentType": "external",
     "buttonText": "Analyze Now",
     "version": "v0.1.0(beta)"  
+  },
+  {
+    "id": 4,
+    "title": "Neon Ru",
+    "subtitle": "眨眼閃陷阱",
+    "description": "超簡單無限跑：眨眼開合躲陷阱",
+    "image": "/images/backgrounds/neon_runner.png",
+    "poster": "/images/posters/neon_runner.png",
+    "url": "https://niconiconico123.github.io/runner_game/",
+    "contentType": "external",
+    "buttonText": "Play",
+    "version": "v0.1.0(beta)"  
   }
 ]
